@@ -1,0 +1,114 @@
+deployment|部署|We scheduled the deployment for a quiet period.|我们把部署安排在业务较少的时段。|schedule a deployment
+orchestration|编排|Workflow orchestration coordinates tasks across multiple services.|工作流编排协调多个服务中的任务。|workflow orchestration
+observability|可观测性|Observability helps us understand why a service is failing.|可观测性帮助我们了解服务为什么出错。|improve observability
+microservices|微服务|We split the application into smaller microservices.|我们把应用拆分成更小的微服务。|build microservices
+monolith|单体应用|The team migrated the monolith one module at a time.|团队逐个模块迁移这个单体应用。|migrate a monolith
+refactoring|重构|Refactoring improves the code without changing its behavior.|重构改善代码而不改变其行为。|code refactoring
+ingestion|数据摄取|Data ingestion brings events from several systems into one pipeline.|数据摄取把多个系统的事件汇入一条流水线。|data ingestion
+retrieval|检索|We improved document retrieval by adding a search index.|我们通过添加搜索索引改进了文档检索。|document retrieval
+throughput|吞吐量|The new queue increased throughput during peak hours.|新队列提高了高峰时段的吞吐量。|increase throughput
+latency|延迟|Caching reduced the latency of repeated requests.|缓存降低了重复请求的延迟。|reduce latency
+availability|可用性|We monitor service availability around the clock.|我们全天监控服务可用性。|service availability
+scalability|可扩展性|We tested scalability before launching the new service.|我们在新服务上线前测试了可扩展性。|test scalability
+resilience|韧性；故障恢复能力|Retries can improve resilience when failures are temporary.|故障是暂时性的情况下，重试可以提高恢复能力。|system resilience
+idempotency|幂等性|Idempotency prevents a retried payment request from charging twice.|幂等性防止重试支付请求时重复扣款。|ensure idempotency
+concurrency|并发性|We limited concurrency to protect the database.|我们限制并发量来保护数据库。|limit concurrency
+consistency|一致性|We check data consistency after each migration.|每次迁移后我们都检查数据一致性。|data consistency
+atomicity|原子性|Atomicity ensures that a transaction succeeds completely or has no effect.|原子性确保事务要么全部成功，要么完全不生效。|transaction atomicity
+durability|持久性|Durability keeps committed data safe after a restart.|持久性保证已提交的数据在重启后仍然保留。|ensure durability
+isolation|隔离性|Transaction isolation controls how concurrent changes are visible.|事务隔离性控制并发变更如何被其他事务看到。|transaction isolation
+rollback|回滚|We prepared a rollback plan before the release.|我们在发布前准备了回滚方案。|rollback plan
+failover|故障转移|Automatic failover sends traffic to a healthy server.|自动故障转移把流量转到健康的服务器。|automatic failover
+replication|复制；副本同步|Replication keeps a copy of the database on another server.|复制在另一台服务器上保留数据库副本。|database replication
+partition|分区|Each partition stores a subset of the records.|每个分区存储一部分记录。|table partition
+sharding|分片|Sharding distributes data across several database servers.|分片把数据分散到多个数据库服务器上。|database sharding
+cache|缓存|The cache stores results that are expensive to calculate.|缓存保存计算成本较高的结果。|invalidate a cache
+thread|线程|A worker thread processes tasks from the queue.|工作线程处理队列中的任务。|worker thread
+process|进程；处理|The server runs in a separate process.|服务器在独立进程中运行。|background process
+instance|实例|We added another service instance to handle more traffic.|我们增加了一个服务实例来处理更多流量。|service instance
+class|类|This class defines how payment requests are validated.|这个类定义了支付请求的验证方式。|define a class
+object|对象|The object contains the current user's preferences.|这个对象包含当前用户的偏好。|create an object
+interface|接口|The interface exposes only the operations clients need.|这个接口只提供客户端需要的操作。|public interface
+inheritance|继承|Inheritance allows a class to reuse behavior from another class.|继承允许一个类复用另一个类的行为。|class inheritance
+polymorphism|多态|Polymorphism lets different implementations share one interface.|多态让不同实现共用一个接口。|use polymorphism
+encapsulation|封装|Encapsulation keeps internal state behind a clear interface.|封装把内部状态隐藏在清晰的接口后面。|data encapsulation
+abstraction|抽象|This abstraction hides the details of database access.|这个抽象隐藏了数据库访问细节。|useful abstraction
+exception|异常|We catch the exception and return a clear error message.|我们捕获异常并返回清晰的错误信息。|handle an exception
+callback|回调|The callback runs after the request finishes.|请求完成后执行这个回调。|register a callback
+promise|异步结果对象；承诺|The promise resolves when the operation completes.|操作完成时，这个异步结果对象进入成功状态。|resolve a promise
+closure|闭包|A closure can retain access to variables from its enclosing scope.|闭包可以继续访问外层作用域中的变量。|create a closure
+scope|作用域；范围|The variable is only visible within this scope.|这个变量只在此作用域内可见。|variable scope
+heap|堆|The runtime allocates objects on the heap.|运行时在堆上分配对象。|heap memory
+stack|栈|The stack trace shows where the error occurred.|堆栈跟踪显示错误发生的位置。|stack trace
+queue|队列|The queue holds tasks until a worker is ready.|队列保存任务，直到有可用的工作进程。|message queue
+pipeline|流水线|The pipeline validates records before storing them.|这条流水线在存储记录前进行验证。|data pipeline
+middleware|中间件|The middleware checks authentication before forwarding the request.|这个中间件在转发请求前检查身份认证。|authentication middleware
+gateway|网关|The gateway routes requests to the appropriate service.|网关把请求路由到相应服务。|API gateway
+endpoint|接口端点|This endpoint returns the user's transaction history.|这个接口端点返回用户的交易历史。|API endpoint
+payload|消息载荷|The payload must include a unique request identifier.|消息载荷必须包含唯一的请求标识符。|request payload
+schema|模式；数据结构定义|We added a version number to the schema.|我们在数据结构定义中加入了版本号。|database schema
+query|查询|The query returns only the records matching the filter.|这个查询只返回符合筛选条件的记录。|execute a query
+index|索引|The index makes customer searches faster.|这个索引让客户搜索更快。|database index
+cursor|游标|The cursor points to the next batch of results.|游标指向下一批结果。|pagination cursor
+transaction|事务；交易|The transaction updates both records together.|这个事务同时更新两条记录。|database transaction
+commit|提交|We commit the transaction only after every check passes.|所有检查通过后我们才提交事务。|commit a transaction
+branch|分支|We created a branch for the payment fix.|我们为支付修复创建了一个分支。|feature branch
+merge|合并|Please merge the change after the tests pass.|请在测试通过后合并变更。|merge a change
+patch|补丁|The patch fixes a memory leak in the worker.|这个补丁修复了工作进程中的内存泄漏。|apply a patch
+release|发布；版本|The release includes a fix for duplicate payments.|这个版本包含重复支付问题的修复。|release notes
+regression|回归缺陷|The regression test checks that the old bug stays fixed.|这个回归测试检查旧缺陷是否再次出现。|regression test
+fixture|测试夹具|The fixture creates a temporary database for each test.|这个测试夹具为每个测试创建临时数据库。|test fixture
+mock|模拟对象|We use a mock to simulate the external payment service.|我们使用模拟对象来模拟外部支付服务。|mock service
+token|令牌|Never write an access token to a public log.|不要把访问令牌写入公开日志。|access token
+credential|凭证|The service reads its credential from a protected setting.|服务从受保护的配置中读取凭证。|service credential
+permission|权限|This operation requires permission to update the account.|这个操作需要更新账户的权限。|grant permission
+vulnerability|漏洞|The team patched the vulnerability before the next release.|团队在下次发布前修复了漏洞。|security vulnerability
+encryption|加密|Encryption protects the contents of stored credentials.|加密保护已存储凭证的内容。|data encryption
+decryption|解密|Only the authorized service has the key for decryption.|只有授权服务拥有解密密钥。|decryption key
+hash|哈希值|We compare the hash to detect unexpected changes.|我们比较哈希值来检测意外改动。|file hash
+salt|密码散列的随机盐值|A unique salt makes identical passwords produce different hashes.|唯一的盐值让相同密码产生不同的哈希值。|password salt
+certificate|证书|The client checks the server's certificate before connecting.|客户端在连接前检查服务器证书。|TLS certificate
+session|会话|The session expires after a period of inactivity.|一段时间没有活动后，会话失效。|user session
+cookie|浏览器 Cookie|The cookie stores a session identifier.|这个 Cookie 存储会话标识符。|session cookie
+sandbox|沙箱|We test the integration in a sandbox before using live accounts.|我们先在沙箱中测试集成，再使用真实账户。|test sandbox
+container|容器|The container packages the service and its dependencies.|容器封装服务及其依赖。|application container
+cluster|集群|The cluster distributes requests across several nodes.|集群把请求分配到多个节点。|database cluster
+node|节点|We removed the unhealthy node from the cluster.|我们把不健康的节点移出了集群。|worker node
+pod|容器组|The pod restarts when its health check fails.|健康检查失败时，这个容器组会重启。|Kubernetes pod
+volume|存储卷；交易量|A persistent volume keeps data after a container restarts.|持久化存储卷在容器重启后仍然保留数据。|persistent volume
+mount|挂载|We mount the configuration directory as read-only.|我们以只读方式挂载配置目录。|mount a volume
+probe|探针|The readiness probe checks whether the service can receive traffic.|就绪探针检查服务能否接收流量。|readiness probe
+tracing|链路追踪|Distributed tracing shows how a request moves between services.|分布式链路追踪显示请求如何在服务之间流转。|distributed tracing
+logging|日志记录|Structured logging makes production issues easier to investigate.|结构化日志让生产问题更容易排查。|structured logging
+instrumentation|监测埋点|Instrumentation records how long each operation takes.|监测埋点记录每个操作所需的时间。|add instrumentation
+alert|告警|The alert fires when the error rate exceeds the threshold.|错误率超过阈值时会触发告警。|configure an alert
+metric|指标|This metric tracks the number of failed payment requests.|这个指标跟踪失败支付请求的数量。|performance metric
+bottleneck|瓶颈|The database connection pool became a bottleneck.|数据库连接池成为了瓶颈。|identify a bottleneck
+downtime|停机时间|We planned the migration to minimize downtime.|我们制定迁移计划以尽量减少停机时间。|reduce downtime
+trade-off|权衡；取舍|There is a trade-off between latency and consistency.|延迟和一致性之间存在取舍。|evaluate a trade-off
+onboarding|入职引导；接入引导|The onboarding guide helps developers make their first API call.|接入指南帮助开发者发起第一次 API 调用。|developer onboarding
+stakeholder|利益相关者|We confirmed the requirements with every key stakeholder.|我们与每位关键利益相关者确认了需求。|key stakeholder
+procurement|采购|The procurement team compares offers from several suppliers.|采购团队比较多家供应商的报价。|procurement process
+commission|佣金|The commission depends on the client's trading volume.|佣金取决于客户的交易量。|commission settlement
+rebate|返佣；返利|The monthly rebate is calculated from eligible trades.|月度返佣根据符合条件的交易计算。|rebate calculation
+disbursement|款项支付；拨付|We verify the amount before each disbursement.|每次付款前我们都会核对金额。|fund disbursement
+payout|付款|Each payout has a unique reference number.|每笔付款都有唯一的参考编号。|payout record
+affiliate|合作推广者|The affiliate can view commission reports in the dashboard.|合作推广者可以在看板中查看佣金报告。|affiliate program
+attribution|归因|Customer attribution links each new client to a referral source.|客户归因把每位新客户关联到推荐来源。|customer attribution
+acquisition|获客；获取|We measure acquisition cost for each marketing channel.|我们衡量每个营销渠道的获客成本。|customer acquisition
+settlement|结算|The settlement report lists all completed transfers.|结算报告列出了所有已完成的转账。|commission settlement
+governance|治理|Engineering governance defines how teams approve and review changes.|工程治理规定团队如何审批和审查变更。|engineering governance
+deliverable|交付物|Each deliverable must meet the agreed acceptance criteria.|每项交付物必须满足约定的验收标准。|review a deliverable
+actionable|可执行的|Please turn the feedback into actionable tasks.|请把反馈转化为可执行的任务。|actionable feedback
+commission settlement|佣金结算|Commission settlement requires accurate trading records.|佣金结算需要准确的交易记录。|accurate commission settlement
+zero-downtime deployment|零停机部署|Zero-downtime deployment keeps the service available during a release.|零停机部署使服务在发布期间保持可用。|plan a zero-downtime deployment
+data ingestion|数据摄取|Our data ingestion pipeline validates every incoming record.|我们的数据摄取流水线验证每条传入记录。|data ingestion pipeline
+service discovery|服务发现|Service discovery helps clients locate healthy service instances.|服务发现帮助客户端定位健康的服务实例。|automatic service discovery
+load testing|负载测试|Load testing showed that the database needed more connections.|负载测试表明数据库需要更多连接。|perform load testing
+access control|访问控制|Access control limits who can view sensitive account data.|访问控制限制谁能查看敏感的账户数据。|role-based access control
+natural language|自然语言|Users can ask the agent questions in natural language.|用户可以用自然语言向智能体提问。|natural language query
+human-in-the-loop|人在回路中；人工参与|A human-in-the-loop process allows a reviewer to approve sensitive actions.|人工参与的流程允许审核者批准敏感操作。|human-in-the-loop approval
+code review|代码审查|Code review helps us find problems before deployment.|代码审查帮助我们在部署前发现问题。|request a code review
+root cause analysis|根因分析|Root cause analysis explains why the payment records were missing.|根因分析解释了支付记录缺失的原因。|perform root cause analysis
+backpressure|背压|Backpressure prevents a fast producer from overwhelming a slow consumer.|背压防止快速生产者压垮较慢的消费者。|apply backpressure
+webhook|事件回调通知接口|The webhook notifies our service when a payment succeeds.|支付成功时，事件回调接口通知我们的服务。|payment webhook

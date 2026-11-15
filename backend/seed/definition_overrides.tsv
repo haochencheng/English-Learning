@@ -1,0 +1,184 @@
+architecture|系统架构|The structure of a software system and the relationships between its components.
+asynchronous|异步的|Allowing an operation to complete later without making the caller wait for it immediately.
+synchronous|同步的|Requiring the caller to wait until an operation completes before continuing.
+authentication|身份认证|Checking that a user or service is who it claims to be.
+authorization|授权|Deciding which actions an authenticated user or service is allowed to perform.
+automation|自动化|Using software to perform tasks with less manual work.
+compilation|编译|Translating source code into another form that a computer can run or process.
+compression|压缩|Reducing the amount of space needed to represent data.
+configuration|配置|Settings that control how a program or service operates.
+constructor|构造函数；构造器|A special operation that initializes a new object.
+context|上下文|Information about the environment or state in which an operation runs.
+declaration|声明|Code that introduces a name and describes an entity such as a variable or function.
+deterministic|确定性的|Producing the same result when given the same input and conditions.
+diagnostic|用于诊断的|Helping identify the cause of a problem or failure.
+documentation|文档|Written explanations of how a system works and how to use or maintain it.
+executable|可执行文件；可执行的|A file containing instructions that an operating system can run.
+expression|表达式|A combination of values and operations that produces a result.
+function|函数|A named or unnamed block of code that performs an operation and may return a value.
+generic|泛型的；通用的|Designed to work with different types rather than one specific type.
+initialization|初始化|Setting up an object, variable, or system before it is used.
+integration|集成|Connecting separate components so that they work together.
+literal|字面量|A value written directly in source code, such as a number or a quoted string.
+memory|内存|Storage used by a running program to hold data and instructions.
+migration|迁移|Moving data or a system to a new structure, version, or environment.
+module|模块|A unit of software that groups related code and exposes a defined interface.
+overload|重载；过载|To provide multiple operations with the same name but different parameters, or to exceed a system's capacity.
+override|重写；覆盖|To replace inherited behavior or give one setting priority over another.
+parameter|参数|A named input that a function or operation expects to receive.
+persistence|持久化|Keeping data available after the process that created it has stopped.
+pointer|指针|A value that refers to a location in memory.
+recursion|递归|Solving a problem by having a function call itself on smaller parts of the problem.
+reference|引用|A way to access an existing object or value without copying it.
+repository|代码仓库|A location that stores project files and often their version history.
+scheduler|调度器|A component that decides when tasks should run.
+semaphore|信号量|A synchronization mechanism that limits access to a shared resource.
+serialization|序列化|Converting data or objects into a format that can be stored or transmitted.
+socket|套接字|An endpoint through which programs exchange data over a network.
+subscription|订阅|An arrangement to receive updates or events from a source.
+synchronization|同步|Coordinating operations or copies of data so they remain consistent.
+syntax|语法|Rules that define how valid code is written in a programming language.
+template|模板|A reusable structure used to generate documents, code, or other content.
+variable|变量|A named place or reference used to hold a value in a program.
+vector|向量|An ordered collection of values, often used to represent a point, direction, or embedding.
+version|版本|A particular state or release of software or data.
+worker|工作线程或进程|A component that performs tasks assigned by another part of a system.
+aggregate|聚合；汇总|To combine multiple values or records into a summary.
+annotation|注解|Metadata attached to code to provide additional information or instructions.
+assertion|断言|A check that a condition expected to be true actually holds.
+assignment|赋值；任务分配|Giving a value to a variable or assigning work to someone.
+attribute|属性|A named property associated with an object or entity.
+batch|批次；批处理|A group of items or tasks processed together.
+client|客户端；客户|A program or person that requests a service from another system or organization.
+compatibility|兼容性|The ability of components or versions to work together correctly.
+constraint|约束|A rule that limits which values or operations are allowed.
+counter|计数器|A value used to track how many times something has happened.
+daemon|后台守护进程|A process that runs in the background to provide a service.
+dashboard|看板；仪表盘|A screen that presents important information and metrics in one place.
+decorator|装饰器|A mechanism that adds or changes behavior around another function or object.
+destination|目标地址；目的地|The location to which data, requests, or messages are sent.
+enumeration|枚举|A defined set of named values or the act of listing items.
+environment|运行环境|The software, settings, and resources in which a program runs.
+event|事件|An occurrence that a program can detect and respond to.
+filter|过滤器；筛选|A rule or component that selects, excludes, or transforms data.
+generator|生成器|A function or object that produces values as they are requested.
+handler|处理器；处理函数|Code responsible for responding to a particular event or request.
+host|主机|A computer or system that provides resources or services on a network.
+increment|增量；递增|An increase in a value, often by one.
+invocation|调用|An act of calling a function, method, or service.
+layer|层|A level in a system that has a defined responsibility and interacts with adjacent levels.
+listener|监听器|Code that waits for and reacts to particular events.
+modifier|修饰符|A keyword or property that changes how a declaration behaves or can be accessed.
+notification|通知|A message informing a person or system that something has happened.
+pattern|模式|A recurring structure or a reusable approach to a common problem.
+performance|性能|How efficiently a system responds and completes work.
+port|端口；移植|A numbered communication endpoint, or the act of adapting software to another platform.
+precision|精度|The level of detail or exactness used to represent or measure a value.
+processor|处理器|A component that executes instructions or transforms input data.
+proxy|代理|An intermediary that forwards requests or responses between other parties.
+receiver|接收方|A component that accepts a message, signal, or request.
+reflection|反射|The ability of a program to inspect types or objects while it is running.
+registration|注册|Adding a user, service, or handler to a system so it can be recognized.
+registry|注册表；注册中心|A directory that stores information about available services, components, or settings.
+resolver|解析器|A component that turns a name or request into the value or location it refers to.
+retry|重试|An additional attempt to perform an operation after it fails.
+signature|签名|Information describing how a function is called, or a value used to verify authenticity.
+snapshot|快照|A record of the state of a system or data at a particular point in time.
+source|来源；源代码|The origin of data, or code written in a programming language before compilation.
+statement|语句|An instruction or declaration in a programming language.
+stream|数据流|A sequence of data that can be read or processed over time.
+string|字符串|A sequence of characters represented as a value.
+subscriber|订阅者|A component or person that receives events or updates from a publisher.
+utility|实用工具|A small program or function that performs a common supporting task.
+virtual|虚拟的|Provided through software rather than directly by a dedicated physical resource.
+widget|界面组件|A reusable element of a graphical interface, such as a button or input field.
+abort|中止|To stop an operation before it completes.
+apply|应用|To put a rule, setting, or change into effect.
+bind|绑定|To associate a name, value, or resource with another part of a program.
+bootstrap|引导；启动初始化|To start a system by setting up the basic components it needs.
+cascade|级联|To cause one action or change to trigger related actions or changes.
+catch|捕获|To handle an exception raised during program execution.
+dispatch|分派|To send a task, event, or request to the component responsible for handling it.
+dispose|释放资源|To release resources that an object or process no longer needs.
+emit|发出|To produce and send an event, signal, or value.
+execute|执行|To carry out instructions or run a program.
+expose|对外提供；暴露|To make a function, service, or piece of data accessible to others.
+extend|扩展|To add functionality or build on existing behavior.
+fetch|获取|To request and retrieve data from another location.
+flush|刷新缓冲区|To send buffered data to its destination rather than keeping it in memory.
+forward|转发|To send received data or a request to another destination.
+implement|实现|To turn a design or requirement into working code or behavior.
+inject|注入|To supply a dependency or value from outside a component.
+insert|插入|To add a new item or record to a collection or data store.
+invoke|调用|To call a function, method, or service so that it runs.
+join|连接；关联|To combine related records or wait for another task to finish.
+load|加载；负载|To bring data or code into memory, or the amount of work a system handles.
+map|映射|To associate keys with values or transform each item in a collection.
+marshal|编组；整理为传输格式|To arrange data into a form suitable for storage or communication.
+modify|修改|To change an existing value, record, or piece of code.
+mutate|原地改变|To change the state of an existing object.
+normalize|规范化|To transform data into a consistent or standard form.
+poll|轮询|To check repeatedly whether new data or a change is available.
+propagate|传播；传递|To pass a change, signal, or error through a system.
+render|渲染|To turn data or instructions into a visible representation.
+resolve|解析；解决|To determine a referenced value or location, or to settle a problem.
+return|返回|To send a result back to the caller of a function or operation.
+sanitize|清理输入|To remove or transform unsafe or unwanted parts of input data.
+serialize|序列化|To convert data into a form that can be stored or sent.
+shuffle|打乱顺序|To rearrange items into a random order.
+sort|排序|To arrange items according to a defined ordering rule.
+subscribe|订阅|To request updates or events from a publisher or service.
+throttle|限流|To limit how quickly operations or requests are allowed to occur.
+trace|追踪|To follow the steps of an operation across code or services.
+truncate|截断|To shorten data by removing its remaining part.
+update|更新|To change existing data or software to a newer state.
+validate|验证|To check that data or behavior meets specified rules.
+wrap|包装；封装|To place an interface or additional behavior around an existing component.
+yield|产出并让出执行|To produce a value and temporarily give control back to a caller or scheduler.
+checkpoint|检查点|A saved state from which processing can resume after interruption.
+coverage|测试覆盖率|A measure of which parts of code or behavior are exercised by tests.
+decomposition|分解；拆分|Dividing a system or problem into smaller parts with clearer responsibilities.
+delegation|委派|Assigning work or responsibility to another person or component.
+flexibility|灵活性|The ability to adapt to different requirements or conditions.
+garbage|待回收的无用对象|Data or objects that a program no longer needs or can reach.
+guideline|指导原则|Advice that helps people make consistent decisions or perform work well.
+handshake|握手|An initial exchange used to establish communication or agree on parameters.
+heartbeat|心跳信号|A periodic signal indicating that a component is still running or reachable.
+incident|生产事件；故障|An unexpected event that disrupts or threatens normal service.
+localization|本地化|Adapting software or content for a particular language or region.
+maintenance|维护|Work that keeps a system functioning correctly over time.
+manifest|清单；配置声明|A structured description of components, settings, or intended system state.
+mechanism|机制|A process or arrangement that makes a particular behavior possible.
+mitigation|缓解措施|An action that reduces the likelihood or impact of a problem.
+modification|修改|A change made to an existing design, system, or piece of data.
+pagination|分页|Dividing a large set of results into smaller pages for retrieval or display.
+parallelism|并行性|Performing multiple operations at the same time.
+portability|可移植性|The ease with which software can run in different environments.
+priority|优先级|The relative importance that determines which task should be handled first.
+production|生产环境|The environment in which a service is used for real work by its intended users.
+resolution|解决；分辨率|The solution to a problem, or the amount of detail a display or image represents.
+strategy|策略|A planned approach for achieving a goal.
+tolerance|容错能力；容许范围|The amount of variation or failure a system can accept while continuing to work.
+transparency|透明性|The extent to which behavior, decisions, or status can be understood and inspected.
+verification|核验|Checking evidence to confirm that a result or implementation is correct.
+technical|技术的|Related to the practical methods, tools, or specialized knowledge used in a field.
+capital|资本；资金|Money or other resources used to start or operate a business.
+asset|资产|A resource of value owned or controlled by a person or organization.
+backend|后端|The server-side parts of an application that process requests and manage data.
+frontend|前端|The parts of an application that users see and interact with directly.
+coroutine|协程|A computation that can suspend its execution and resume later.
+namespace|命名空间|A scope that organizes names and prevents naming conflicts.
+timestamp|时间戳|A value that records when an event occurred.
+virtualization|虚拟化|Creating software-based versions of computing resources such as machines or networks.
+deserialize|反序列化|To reconstruct data or objects from a stored or transmitted representation.
+deduplicate|去重|To remove repeated items while keeping one copy of each distinct item.
+reconnect|重新连接|To establish a connection again after it has been interrupted.
+persist|持久化保存|To store data so it remains available after the current process ends.
+unsubscribe|取消订阅|To stop receiving updates or events from a publisher.
+prompt|提示词；提示|Input that directs a language model or requests a response from a user.
+embedding|嵌入向量|A numerical representation of data that can capture useful relationships or similarity.
+retrieval-augmented generation|检索增强生成|Producing model responses using relevant information retrieved from an external source.
+large language model|大语言模型|A model trained on large amounts of text to process and generate language.
+agentic workflow|智能体工作流|A process in which an agent selects and performs actions to work toward a goal.
+service deregistration|服务注销|Removing a service instance from a registry so clients stop discovering it.
+credential access|凭证访问|Obtaining or using authentication information needed to access a protected resource.

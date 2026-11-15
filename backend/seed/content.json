@@ -1,0 +1,557 @@
+{
+  "words": [
+    {
+      "id": "job-0",
+      "deck": "job",
+      "term": "reconciliation",
+      "pos": "n.",
+      "meaning": "对账；核对账目",
+      "collocation": "daily reconciliation",
+      "example": "Daily reconciliation helps our team find missing payment records.",
+      "translation": "每日对账帮助我们的团队发现缺失的支付记录。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-1",
+      "deck": "job",
+      "term": "ledger",
+      "pos": "n.",
+      "meaning": "分类账；账本",
+      "collocation": "update the ledger",
+      "example": "We update the ledger only after the transfer has been confirmed.",
+      "translation": "我们只在转账确认后更新账本。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-2",
+      "deck": "job",
+      "term": "idempotency",
+      "pos": "n.",
+      "meaning": "幂等性",
+      "collocation": "ensure idempotency",
+      "example": "A unique request key helps ensure idempotency when a client retries.",
+      "translation": "客户端重试时，唯一请求键有助于保证幂等性。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-3",
+      "deck": "job",
+      "term": "discrepancy",
+      "pos": "n.",
+      "meaning": "差异；不一致",
+      "collocation": "investigate a discrepancy",
+      "example": "I would investigate the discrepancy before changing either balance.",
+      "translation": "我会先调查差异，再修改任何一方的余额。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-4",
+      "deck": "job",
+      "term": "containment",
+      "pos": "n.",
+      "meaning": "遏制；控制事态",
+      "collocation": "incident containment",
+      "example": "Our first priority during containment is to limit the impact on customers.",
+      "translation": "在遏制事态阶段，我们首先要限制对客户的影响。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-5",
+      "deck": "job",
+      "term": "settlement",
+      "pos": "n.",
+      "meaning": "结算",
+      "collocation": "settlement cycle",
+      "example": "The settlement cycle determines when the merchant receives the money.",
+      "translation": "结算周期决定商户何时收到款项。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-6",
+      "deck": "job",
+      "term": "concurrency",
+      "pos": "n.",
+      "meaning": "并发",
+      "collocation": "handle concurrency",
+      "example": "We tested how the service handles concurrency under a sudden traffic spike.",
+      "translation": "我们测试了服务在流量突然激增时如何处理并发。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-7",
+      "deck": "job",
+      "term": "stakeholders",
+      "pos": "n. pl.",
+      "meaning": "利益相关者；相关参与方",
+      "collocation": "keep stakeholders informed",
+      "example": "I keep stakeholders informed when a delivery date changes.",
+      "translation": "交付日期改变时，我会及时通知相关参与方。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-8",
+      "deck": "job",
+      "term": "traceable",
+      "pos": "adj.",
+      "meaning": "可追溯的",
+      "collocation": "fully traceable",
+      "example": "Each adjustment must be traceable to an approved request.",
+      "translation": "每笔调整都必须能够追溯到一项获批请求。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-9",
+      "deck": "job",
+      "term": "ownership",
+      "pos": "n.",
+      "meaning": "责任担当；所有权",
+      "collocation": "take ownership of",
+      "example": "I take ownership of an issue until the team agrees it is resolved.",
+      "translation": "我会持续负责一个问题，直到团队确认它已解决。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-10",
+      "deck": "job",
+      "term": "withdrawals",
+      "pos": "n. pl.",
+      "meaning": "提款；提现",
+      "collocation": "process withdrawals",
+      "example": "The service queues withdrawals while the bank is unavailable.",
+      "translation": "银行不可用时，该服务会将提现请求排入队列。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-11",
+      "deck": "job",
+      "term": "deposits",
+      "pos": "n. pl.",
+      "meaning": "存款；入金",
+      "collocation": "customer deposits",
+      "example": "We verify customer deposits before making the funds available.",
+      "translation": "我们先核实客户入金，再使资金可用。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-12",
+      "deck": "job",
+      "term": "distributed transactions",
+      "pos": "n. phrase",
+      "meaning": "分布式事务",
+      "collocation": "coordinate distributed transactions",
+      "example": "Distributed transactions require careful handling of partial failures.",
+      "translation": "分布式事务需要谨慎处理部分失败的情况。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-13",
+      "deck": "job",
+      "term": "eventual consistency",
+      "pos": "n. phrase",
+      "meaning": "最终一致性",
+      "collocation": "accept eventual consistency",
+      "example": "We accept eventual consistency for this reporting view, but not for balance checks.",
+      "translation": "这个报表视图可以接受最终一致性，但余额校验不可以。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-14",
+      "deck": "job",
+      "term": "root-cause analysis",
+      "pos": "n. phrase",
+      "meaning": "根因分析",
+      "collocation": "conduct a root-cause analysis",
+      "example": "A root-cause analysis showed that an expired certificate had blocked requests.",
+      "translation": "根因分析表明，一个过期的证书阻断了请求。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "job-15",
+      "deck": "job",
+      "term": "suspense accounts",
+      "pos": "n. phrase",
+      "meaning": "暂记账户；待查账户",
+      "collocation": "review suspense accounts",
+      "example": "We review suspense accounts to identify entries that still need clarification.",
+      "translation": "我们检查暂记账户，以找出仍需澄清的账目。",
+      "source_url": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/"
+    },
+    {
+      "id": "ielts-0",
+      "deck": "ielts",
+      "term": "sustainable",
+      "pos": "adj.",
+      "meaning": "可持续的",
+      "collocation": "sustainable development",
+      "example": "Cities need sustainable transport options as their populations grow.",
+      "translation": "随着人口增长，城市需要可持续的交通选择。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-1",
+      "deck": "ielts",
+      "term": "significant",
+      "pos": "adj.",
+      "meaning": "显著的；重要的",
+      "collocation": "a significant improvement",
+      "example": "Flexible working hours can lead to a significant improvement in staff satisfaction.",
+      "translation": "弹性工作时间可以显著提高员工满意度。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-2",
+      "deck": "ielts",
+      "term": "contribute",
+      "pos": "v.",
+      "meaning": "贡献；促成",
+      "collocation": "contribute to",
+      "example": "Public libraries contribute to equal access to education.",
+      "translation": "公共图书馆有助于实现平等的教育机会。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-3",
+      "deck": "ielts",
+      "term": "evidence",
+      "pos": "n.",
+      "meaning": "证据；依据",
+      "collocation": "reliable evidence",
+      "example": "We need reliable evidence before drawing a conclusion about remote work.",
+      "translation": "对远程工作下结论前，我们需要可靠的证据。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-4",
+      "deck": "ielts",
+      "term": "perspective",
+      "pos": "n.",
+      "meaning": "视角；观点",
+      "collocation": "from a different perspective",
+      "example": "Working abroad helped me see familiar problems from a different perspective.",
+      "translation": "在国外工作帮助我从不同视角看待熟悉的问题。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-5",
+      "deck": "ielts",
+      "term": "allocate",
+      "pos": "v.",
+      "meaning": "分配",
+      "collocation": "allocate resources",
+      "example": "Local governments should allocate resources to areas with the greatest need.",
+      "translation": "地方政府应将资源分配给需求最大的地区。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-6",
+      "deck": "ielts",
+      "term": "innovation",
+      "pos": "n.",
+      "meaning": "创新",
+      "collocation": "encourage innovation",
+      "example": "Schools can encourage innovation by giving students time to experiment.",
+      "translation": "学校可以通过给学生尝试的时间来鼓励创新。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-7",
+      "deck": "ielts",
+      "term": "productivity",
+      "pos": "n.",
+      "meaning": "生产率；工作效率",
+      "collocation": "improve productivity",
+      "example": "Shorter meetings may improve productivity without reducing collaboration.",
+      "translation": "缩短会议可能在不削弱协作的情况下提高工作效率。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-8",
+      "deck": "ielts",
+      "term": "inequality",
+      "pos": "n.",
+      "meaning": "不平等",
+      "collocation": "reduce inequality",
+      "example": "Affordable internet access could help reduce inequality in education.",
+      "translation": "可负担的互联网接入可能有助于减少教育不平等。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-9",
+      "deck": "ielts",
+      "term": "adapt",
+      "pos": "v.",
+      "meaning": "适应；调整",
+      "collocation": "adapt to change",
+      "example": "Workers need opportunities to adapt to changes in technology.",
+      "translation": "劳动者需要获得适应技术变化的机会。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-10",
+      "deck": "ielts",
+      "term": "consequence",
+      "pos": "n.",
+      "meaning": "结果；后果",
+      "collocation": "an unintended consequence",
+      "example": "An unintended consequence of automation may be a loss of entry-level jobs.",
+      "translation": "自动化的一个意外后果可能是入门级岗位减少。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-11",
+      "deck": "ielts",
+      "term": "feasible",
+      "pos": "adj.",
+      "meaning": "可行的",
+      "collocation": "a feasible solution",
+      "example": "A shared bus service may be a feasible solution for small communities.",
+      "translation": "共享公交服务对于小型社区可能是一种可行方案。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-12",
+      "deck": "ielts",
+      "term": "whereas",
+      "pos": "conj.",
+      "meaning": "然而；而（用于对比）",
+      "collocation": "whereas + clause",
+      "example": "Some employees value flexibility, whereas others prefer a fixed routine.",
+      "translation": "一些员工重视灵活性，而另一些更喜欢固定作息。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-13",
+      "deck": "ielts",
+      "term": "outweigh",
+      "pos": "v.",
+      "meaning": "在重要性上超过",
+      "collocation": "benefits outweigh costs",
+      "example": "The long-term benefits may outweigh the initial training costs.",
+      "translation": "长期收益可能超过初期培训成本。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-14",
+      "deck": "ielts",
+      "term": "prioritise",
+      "pos": "v.",
+      "meaning": "优先考虑；确定优先次序",
+      "collocation": "prioritise public health",
+      "example": "City planners should prioritise public health when designing new districts.",
+      "translation": "城市规划者在设计新区时应优先考虑公共健康。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "ielts-15",
+      "deck": "ielts",
+      "term": "resilient",
+      "pos": "adj.",
+      "meaning": "有韧性的；适应力强的",
+      "collocation": "a resilient workforce",
+      "example": "Continuous learning can help build a more resilient workforce.",
+      "translation": "持续学习有助于培养适应力更强的劳动队伍。",
+      "source_url": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+    },
+    {
+      "id": "business-0",
+      "deck": "business",
+      "term": "agenda",
+      "pos": "n.",
+      "meaning": "议程",
+      "collocation": "set the agenda",
+      "example": "Could we add the launch timeline to tomorrow’s agenda?",
+      "translation": "我们可以把上线时间表加入明天的议程吗？",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-1",
+      "deck": "business",
+      "term": "deliverable",
+      "pos": "n.",
+      "meaning": "交付成果",
+      "collocation": "agree on a deliverable",
+      "example": "Let us agree on the first deliverable before estimating the workload.",
+      "translation": "我们先商定第一项交付成果，再估算工作量。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-2",
+      "deck": "business",
+      "term": "deadline",
+      "pos": "n.",
+      "meaning": "截止日期",
+      "collocation": "meet a deadline",
+      "example": "We can meet the deadline if the requirements are confirmed today.",
+      "translation": "如果今天确认需求，我们就能按期完成。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-3",
+      "deck": "business",
+      "term": "negotiate",
+      "pos": "v.",
+      "meaning": "协商；谈判",
+      "collocation": "negotiate the terms",
+      "example": "We need to negotiate the support terms with the supplier.",
+      "translation": "我们需要与供应商协商支持条款。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-4",
+      "deck": "business",
+      "term": "compromise",
+      "pos": "n. / v.",
+      "meaning": "折中；妥协",
+      "collocation": "reach a compromise",
+      "example": "Both teams reached a compromise on the release schedule.",
+      "translation": "两个团队就发布日程达成了折中方案。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-5",
+      "deck": "business",
+      "term": "clarify",
+      "pos": "v.",
+      "meaning": "澄清；说明",
+      "collocation": "clarify expectations",
+      "example": "Could you clarify what you expect from the first version?",
+      "translation": "您能说明一下对第一个版本的期望吗？",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-6",
+      "deck": "business",
+      "term": "follow up",
+      "pos": "phrasal v.",
+      "meaning": "跟进",
+      "collocation": "follow up on",
+      "example": "I will follow up on the open questions after our call.",
+      "translation": "通话后，我会跟进尚未解决的问题。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-7",
+      "deck": "business",
+      "term": "trade-off",
+      "pos": "n.",
+      "meaning": "权衡；取舍",
+      "collocation": "evaluate a trade-off",
+      "example": "The main trade-off is between a faster launch and broader test coverage.",
+      "translation": "主要取舍在于更快上线与更广的测试覆盖之间。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-8",
+      "deck": "business",
+      "term": "alignment",
+      "pos": "n.",
+      "meaning": "一致；共识",
+      "collocation": "reach alignment",
+      "example": "We need alignment on the scope before committing to a date.",
+      "translation": "我们需要先就范围达成共识，再承诺日期。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-9",
+      "deck": "business",
+      "term": "escalate",
+      "pos": "v.",
+      "meaning": "升级处理；向上级反映",
+      "collocation": "escalate an issue",
+      "example": "Please escalate the issue if it blocks another team.",
+      "translation": "如果这个问题阻碍了另一个团队，请将它升级处理。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-10",
+      "deck": "business",
+      "term": "milestone",
+      "pos": "n.",
+      "meaning": "里程碑；阶段目标",
+      "collocation": "reach a milestone",
+      "example": "Completing the pilot is our next milestone.",
+      "translation": "完成试点是我们的下一个阶段目标。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-11",
+      "deck": "business",
+      "term": "scope",
+      "pos": "n.",
+      "meaning": "范围",
+      "collocation": "define the scope",
+      "example": "We should define the scope clearly to avoid unexpected work.",
+      "translation": "我们应该明确范围，以避免意料之外的工作。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-12",
+      "deck": "business",
+      "term": "budget",
+      "pos": "n.",
+      "meaning": "预算",
+      "collocation": "within budget",
+      "example": "The team delivered the migration within budget.",
+      "translation": "团队在预算内完成了迁移。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-13",
+      "deck": "business",
+      "term": "proposal",
+      "pos": "n.",
+      "meaning": "提案；建议",
+      "collocation": "review a proposal",
+      "example": "Please review the proposal and share any concerns by Thursday.",
+      "translation": "请审阅提案，并在周四前提出疑虑。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-14",
+      "deck": "business",
+      "term": "dependency",
+      "pos": "n.",
+      "meaning": "依赖；依赖项",
+      "collocation": "an external dependency",
+      "example": "The bank approval is an external dependency for our release.",
+      "translation": "银行审批是我们发布工作的一项外部依赖。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    },
+    {
+      "id": "business-15",
+      "deck": "business",
+      "term": "action item",
+      "pos": "n. phrase",
+      "meaning": "待办事项；行动项",
+      "collocation": "assign an action item",
+      "example": "Every action item should have an owner and a due date.",
+      "translation": "每个待办事项都应有负责人和截止日期。",
+      "source_url": "https://learnenglish.britishcouncil.org/free-resources/business"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "0",
+      "q": "How would you prevent a payment from being processed twice?",
+      "hint": "使用：idempotency、ledger、reconciliation。先说明重试风险，再解释处理方式与核对机制。",
+      "answer": "I would use an idempotency key to identify repeated requests. I would also enforce a uniqueness constraint and record the payment result atomically. If the outcome were unclear, I would check the provider’s status before retrying. Reconciliation would help us detect differences later."
+    },
+    {
+      "id": "1",
+      "q": "How would you explain a delay to a business partner?",
+      "hint": "使用：deadline、dependency、action item。说明影响、提供新安排，并确认下一步。",
+      "answer": "The approval is still pending, so we may miss Friday’s deadline. This dependency affects the final release only; testing can continue. Could we agree on a revised date after the approval arrives? I will send an update tomorrow, and each action item will have a named owner."
+    },
+    {
+      "id": "2",
+      "q": "How is technology changing the way people work?",
+      "hint": "使用：productivity、adapt、whereas。给出观点、解释原因，再用一个具体例子支持。",
+      "answer": "Technology can improve productivity by reducing repetitive work. For example, automated reports allow staff to spend more time analysing results. However, experienced workers may adapt quickly, whereas new employees may need more support. Employers should provide training alongside new tools."
+    }
+  ],
+  "sources": {
+    "job": "https://www.linkedin.com/jobs/view/senior-java-engineer-%E2%80%93-fund-security-account-security-fiat-onoff-ramp-at-binance-4488654068/",
+    "ielts": "https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en",
+    "business": "https://learnenglish.britishcouncil.org/free-resources/business"
+  }
+}

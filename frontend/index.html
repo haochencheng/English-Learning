@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wordcraft · 职场英语学习室</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%278%27 fill=%27%23ac492b%27/%3E%3Ctext x=%278%27 y=%2729%27 font-size=%2728%27 fill=%27white%27%3Ew%3C/text%3E%3C/svg%3E"
+    />
+    <meta
+      name="description"
+      content="从真实 Java 岗位出发，学习求职、雅思主题与商务英语。词卡、拼写练习与本地间隔复习。"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">wordcraft<span>.</span></div>
+        <div class="brand-sub">职场英语学习室</div>
+        <nav class="nav" aria-label="主导航">
+          <button class="active" data-view="today" aria-current="page">
+            <span class="num">01</span>今日学习</button
+          ><button data-view="library">
+            <span class="num">02</span>我的词库</button
+          ><button data-view="practice">
+            <span class="num">03</span>场景练习</button
+          ><button data-view="videos">
+            <span class="num">04</span>视频学习</button
+          ><button data-view="plan"><span class="num">05</span>学习方案</button>
+        </nav>
+        <div class="sidebar-note">
+          <strong>从词汇，到真实表达。</strong>Java 求职 · IELTS · 商务沟通<br /><br /><span
+            class="status-dot"
+          ></span
+          ><span id="app-status">连接数据库…</span>
+        </div>
+      </aside>
+      <main class="workspace">
+        <header class="topbar">
+          <div class="breadcrumb">
+            学习空间
+            <span
+              >/ <b id="breadcrumb" style="font-weight: 400">今日学习</b></span
+            >
+          </div>
+          <div class="top-actions">
+            <span id="date"></span
+            ><span class="avatar" aria-hidden="true">W</span>
+          </div>
+        </header>
+        <div
+          id="storage-warning"
+          class="storage-warning"
+          role="status"
+          hidden
+        ></div>
+        <div id="app-loading" class="storage-warning" role="status">
+          正在读取数据库中的学习资料…
+        </div>
+        <div id="legacy-banner" class="storage-warning" hidden>
+          发现旧版浏览器进度。<button id="migrate-legacy" class="secondary">
+            合并到数据库
+          </button>
+        </div>
+        <div id="workspace-content" inert>
+          <section class="view" id="view-today">
+            <div class="intro">
+              <div>
+                <div class="eyebrow">A LITTLE EVERY DAY</div>
+                <h1>今天，从一个词开始。</h1>
+                <p>读懂一份职位，也练习说清自己的经验。</p>
+              </div>
+              <span class="tiny-label">每日建议 · 20 分钟</span>
+            </div>
+            <div class="main-grid">
+              <div>
+                <div class="study-head">
+                  <div class="tabs" id="deck-tabs" aria-label="词库分类">
+                    <button
+                      class="selected"
+                      data-deck="job"
+                      aria-pressed="true"
+                    >
+                      求职英语</button
+                    ><button data-deck="ielts" aria-pressed="false">
+                      雅思主题</button
+                    ><button data-deck="business" aria-pressed="false">
+                      商务英语
+                    </button>
+                  </div>
+                  <select
+                    class="small-select"
+                    id="queue-mode"
+                    aria-label="学习顺序"
+                  >
+                    <option value="due">待复习 + 新词</option>
+                    <option value="all">浏览全部词汇</option>
+                  </select>
+                </div>
+                <div id="card-area"></div>
+                <div class="prompt-strip">
+                  <div class="eyebrow">PUT IT INTO WORDS · 学以致用</div>
+                  <h3>
+                    How would you prevent a payment from being processed twice?
+                  </h3>
+                  <p>
+                    试着用 60 秒解释：问题是什么、怎样处理、为什么这样设计。
+                  </p>
+                  <button class="text-button" id="open-speaking">
+                    开始面试表达练习 <span aria-hidden="true">↗</span>
+                  </button>
+                </div>
+              </div>
+              <aside class="aside">
+                <section class="daily">
+                  <div class="daily-title">
+                    <h2>今日进度</h2>
+                    <span id="goal-label">目标 12 词</span>
+                  </div>
+                  <div class="daily-number">
+                    <b id="daily-count" style="font-weight: normal">0</b>
+                    <span>/ 12</span>
+                  </div>
+                  <div
+                    class="bar"
+                    role="progressbar"
+                    aria-label="今日学习进度"
+                    aria-valuemin="0"
+                    aria-valuemax="12"
+                    aria-valuenow="0"
+                  >
+                    <div id="daily-bar" style="width: 0%"></div>
+                  </div>
+                  <p>完成自评即计入，重复复习不重复计数。</p>
+                  <div class="metrics">
+                    <div>
+                      <strong id="due-count">0</strong><span>到期复习</span>
+                    </div>
+                    <div>
+                      <strong id="learned-count">0</strong
+                      ><span>已学词汇 / <span id="word-total">0</span></span>
+                    </div>
+                  </div>
+                </section>
+                <section class="routine">
+                  <h2>20 分钟学习顺序</h2>
+                  <div class="routine-item">
+                    <span class="step">1</span>
+                    <div>
+                      <b>回忆与复习</b>
+                      <p>5 分钟 · 先复习到期词汇</p>
+                    </div>
+                  </div>
+                  <div class="routine-item">
+                    <span class="step">2</span>
+                    <div>
+                      <b>理解与跟读</b>
+                      <p>8 分钟 · 词义、搭配、例句</p>
+                    </div>
+                  </div>
+                  <div class="routine-item">
+                    <span class="step">3</span>
+                    <div>
+                      <b>用自己的话表达</b>
+                      <p>7 分钟 · 拼写与场景练习</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="context">
+                  <div class="eyebrow">YOUR LEARNING CONTEXT</div>
+                  <div class="job">Senior Java Engineer</div>
+                  <p>
+                    Binance · 资金安全与法币出入金<br />从岗位要求中选取 16
+                    个核心词汇。
+                  </p>
+                  <a id="job-link" target="_blank" rel="noopener"
+                    >阅读职位来源 ↗</a
+                  >
+                </section>
+              </aside>
+            </div>
+          </section>
+          <section class="view" id="view-library" hidden>
+            <div class="intro">
+              <div>
+                <div class="eyebrow">YOUR WORD COLLECTION</div>
+                <h1>我的词库</h1>
+                <p id="library-description">正在读取词库…</p>
+              </div>
+            </div>
+            <button class="primary" id="word-add">＋ 新增词条</button>
+            <div class="toolbar" style="margin-top: 20px">
+              <input
+                type="search"
+                id="search"
+                placeholder="搜索英文、中文或搭配…"
+                aria-label="搜索词汇"
+              /><select class="field" id="library-deck" aria-label="筛选词库">
+                <option value="all">全部词库</option>
+                <option value="job">求职英语 · 16</option>
+                <option value="ielts">雅思主题 · 16</option>
+                <option value="business">商务英语 · 16</option>
+              </select>
+            </div>
+            <p class="muted" id="result-count"></p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>WORD / PHRASE</th>
+                    <th>中文含义</th>
+                    <th>词库</th>
+                    <th>学习状态</th>
+                    <th>维护</th>
+                  </tr>
+                </thead>
+                <tbody id="word-list"></tbody>
+              </table>
+            </div>
+            <nav
+              id="library-pagination"
+              class="pagination"
+              aria-label="词库分页"
+            ></nav>
+          </section>
+          <section class="view" id="view-practice" hidden>
+            <div class="intro">
+              <div>
+                <div class="eyebrow">PRACTICE WITH PURPOSE</div>
+                <h1>把认识的词，用出来。</h1>
+                <p>拼写检查帮助回忆；场景表达帮助组织真实经验。</p>
+              </div>
+            </div>
+            <div class="tabs" id="practice-tabs">
+              <button
+                class="selected"
+                data-practice="spelling"
+                aria-pressed="true"
+              >
+                拼写练习</button
+              ><button data-practice="speaking" aria-pressed="false">
+                面试与商务表达
+              </button>
+            </div>
+            <div class="practice-box" id="spelling-panel">
+              <div class="practice-controls">
+                <label class="muted" for="quiz-deck">练习词库</label
+                ><select id="quiz-deck" class="field">
+                  <option value="job">求职英语</option>
+                  <option value="ielts">雅思主题</option>
+                  <option value="business">商务英语</option></select
+                ><span class="muted" id="quiz-progress"></span>
+              </div>
+              <h2 id="quiz-meaning"></h2>
+              <p class="muted">根据中文写出对应词条；短语请完整输入。</p>
+              <form id="quiz-form">
+                <input
+                  id="quiz-input"
+                  placeholder="Type the word or phrase…"
+                  aria-label="英文答案"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  required
+                />
+                <div class="practice-controls">
+                  <button class="primary" id="quiz-check" type="submit">
+                    检查答案</button
+                  ><button
+                    class="secondary"
+                    id="quiz-next"
+                    type="button"
+                    hidden
+                  >
+                    下一题 →
+                  </button>
+                </div>
+              </form>
+              <div class="feedback" id="quiz-feedback" role="status"></div>
+              <p class="muted">
+                答题记录保存到数据库；拼写成绩不自动改变词卡复习计划。
+              </p>
+            </div>
+            <div class="practice-box" id="speaking-panel" hidden>
+              <label class="muted" for="scenario">选择场景</label
+              ><select
+                class="field"
+                id="scenario"
+                style="width: 100%; margin-top: 10px"
+              >
+                <option value="0">技术面试 · 重复支付</option>
+                <option value="1">商务沟通 · 交付延期</option>
+                <option value="2">雅思讨论 · 技术与工作</option>
+              </select>
+              <h2 id="scenario-question"></h2>
+              <p class="muted" id="scenario-hint"></p>
+              <label class="muted" for="draft"
+                >写下提纲，然后尝试脱稿说 60–90 秒。</label
+              ><textarea id="draft" placeholder="My main point is…"></textarea>
+              <div class="practice-controls">
+                <button
+                  class="primary"
+                  id="show-reference"
+                  aria-expanded="false"
+                >
+                  查看参考表达</button
+                ><button class="secondary" id="save-draft">保存草稿</button
+                ><span class="muted" id="draft-count">0 words</span
+                ><span class="muted" id="draft-status">已从数据库读取</span>
+              </div>
+              <div id="reference" class="reference" hidden></div>
+              <p class="muted">
+                参考表达为原创示范，不是你的工作经历。此版本不录音、不自动评分；建议用手机录音并请老师反馈。
+              </p>
+            </div>
+          </section>
+          <section class="view" id="view-videos" hidden>
+            <div class="intro">
+              <div>
+                <div class="eyebrow">LISTEN. NOTICE. SPEAK.</div>
+                <h1>从真实语境，学会表达。</h1>
+                <p>YouTube 英语资料 · 听懂一句，再用自己的话说一次。</p>
+              </div>
+              <button class="secondary" id="video-refresh">刷新资料</button>
+            </div>
+            <details class="collection-panel">
+              <summary>
+                ＋ 采集资料
+                <span id="video-sync-status">正在读取采集状态…</span>
+              </summary>
+              <div class="collection-grid">
+                <form id="video-import-form">
+                  <h2>导入 YouTube 视频</h2>
+                  <label for="video-url">视频链接</label
+                  ><input
+                    id="video-url"
+                    type="url"
+                    placeholder="https://www.youtube.com/watch?v=…"
+                    required
+                  />
+                  <div class="practice-controls">
+                    <select
+                      class="field"
+                      id="video-import-deck"
+                      aria-label="导入视频分类"
+                    >
+                      <option value="job">求职英语</option>
+                      <option value="business">商务英语</option>
+                      <option value="ielts">雅思主题</option></select
+                    ><button class="primary" id="video-import-button">
+                      读取并保存
+                    </button>
+                  </div>
+                  <p class="muted">
+                    采集标题、频道与封面信息，视频通过 YouTube 播放。
+                  </p>
+                </form>
+                <form id="sync-form">
+                  <h2>更新学习资料</h2>
+                  <label for="sync-mode">采集方式</label
+                  ><select class="field" id="sync-mode">
+                    <option value="curated">同步精选视频（无需密钥）</option>
+                    <option value="channels">
+                      采集频道最新视频（无需密钥）
+                    </option>
+                    <option value="search" disabled>
+                      关键词检索（需 API 密钥）
+                    </option>
+                  </select>
+                  <div id="sync-search-fields" hidden>
+                    <label for="sync-query">检索关键词（可选）</label
+                    ><input
+                      id="sync-query"
+                      placeholder="English job interview software engineer"
+                    /><select
+                      class="field"
+                      id="sync-deck"
+                      aria-label="检索视频分类"
+                    >
+                      <option value="job">求职英语</option>
+                      <option value="business">商务英语</option>
+                      <option value="ielts">雅思主题</option>
+                    </select>
+                  </div>
+                  <label for="sync-limit">每次最多采集</label
+                  ><select id="sync-limit" class="field">
+                    <option value="30">30 个</option>
+                    <option value="50">50 个</option>
+                    <option value="100">100 个</option>
+                  </select>
+                  <button
+                    class="primary"
+                    id="sync-start"
+                    style="margin-top: 16px"
+                  >
+                    开始采集
+                  </button>
+                  <p class="muted" id="api-key-status"></p>
+                </form>
+              </div>
+              <p class="muted">订阅频道：<span id="channel-list"></span></p>
+              <details>
+                <summary>最近采集记录</summary>
+                <div id="sync-history"></div>
+              </details>
+            </details>
+            <div class="toolbar video-toolbar">
+              <input
+                type="search"
+                id="video-search"
+                aria-label="搜索视频"
+                placeholder="搜索标题、频道或学习提示…"
+              /><select class="field" id="video-deck" aria-label="视频分类">
+                <option value="all">全部主题</option>
+                <option value="job">求职英语</option>
+                <option value="business">商务英语</option>
+                <option value="ielts">雅思主题</option></select
+              ><label class="favorite-filter"
+                ><input type="checkbox" id="video-favorites" /> 只看收藏</label
+              >
+            </div>
+            <p class="muted" id="video-count"></p>
+            <div class="video-workspace">
+              <div class="video-results">
+                <div id="video-list" class="video-list"></div>
+                <nav
+                  id="video-pagination"
+                  class="pagination"
+                  aria-label="视频分页"
+                ></nav>
+              </div>
+              <div class="video-inspector">
+                <div id="video-placeholder" class="video-placeholder">
+                  <span class="eyebrow">YOUR LISTENING SPACE</span>
+                  <h2>选一个视频，开始精听。</h2>
+                  <p>
+                    一遍听大意，一遍记表达。<br />把新表达带回自己的工作场景。
+                  </p>
+                </div>
+                <article id="video-detail" hidden>
+                  <div class="player">
+                    <iframe
+                      id="video-player"
+                      title="英语学习视频"
+                      allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share;
+                      "
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <p class="video-category" id="video-channel"></p>
+                  <h2 id="video-title"></h2>
+                  <p class="muted" id="video-hint"></p>
+                  <div class="practice-controls">
+                    <button
+                      class="secondary"
+                      id="video-save"
+                      aria-pressed="false"
+                    >
+                      收藏视频</button
+                    ><button
+                      class="secondary"
+                      id="video-complete"
+                      aria-pressed="false"
+                    >
+                      标记学完</button
+                    ><a id="video-external" target="_blank" rel="noopener"
+                      >在 YouTube 打开 ↗</a
+                    >
+                  </div>
+                  <p class="muted">
+                    无法播放时可在 YouTube
+                    打开；字幕和可播放地区由发布者及平台决定。
+                  </p>
+                  <section class="transcript-panel" aria-label="视频双语字幕">
+                    <div class="transcript-heading">
+                      <div>
+                        <span class="eyebrow">READ · LISTEN · UNDERSTAND</span>
+                        <h3>英文原文与中文译文</h3>
+                      </div>
+                      <button
+                        id="transcript-fetch"
+                        class="secondary"
+                        type="button"
+                      >
+                        获取双语字幕
+                      </button>
+                    </div>
+                    <p id="transcript-status" role="status" class="muted"></p>
+                    <p id="transcript-message" class="muted"></p>
+                    <div class="transcript-toolbar">
+                      <input
+                        id="transcript-search"
+                        type="search"
+                        placeholder="搜索完整字幕…"
+                        aria-label="搜索字幕"
+                      /><label
+                        ><input
+                          type="checkbox"
+                          id="transcript-chinese"
+                          checked
+                        />
+                        显示中文</label
+                      ><button
+                        type="button"
+                        class="text-button"
+                        id="transcript-stop"
+                      >
+                        停止朗读
+                      </button>
+                    </div>
+                    <p class="transcript-tip">
+                      点击英文单词即可查词和朗读；点击时间可跳到视频对应位置。
+                    </p>
+                    <div id="transcript-empty" class="transcript-empty" hidden>
+                      还没有可显示的英文原文。获取成功后，全文会按时间顺序保存在这里。
+                    </div>
+                    <div id="transcript-rows" class="transcript-rows"></div>
+                    <div class="transcript-footer">
+                      <span id="transcript-count" class="muted"></span
+                      ><button
+                        id="transcript-more"
+                        type="button"
+                        class="secondary"
+                        hidden
+                      >
+                        继续显示字幕 ↓
+                      </button>
+                    </div>
+                    <p id="transcript-source" class="transcript-source"></p>
+                    <details id="transcript-import">
+                      <summary>导入或补充字幕</summary>
+                      <form id="subtitle-import-form">
+                        <p class="muted">
+                          支持 SRT、VTT
+                          或逐行文本。两份纯文本需要行数一致；已有英文时可以只补充中文。请导入与当前视频对应的内容。
+                        </p>
+                        <label for="subtitle-en">英文字幕</label
+                        ><input
+                          type="file"
+                          id="subtitle-en-file"
+                          accept=".srt,.vtt,.txt"
+                          aria-label="选择英文字幕文件"
+                        /><textarea
+                          id="subtitle-en"
+                          placeholder="粘贴完整英文字幕，或选择文件…"
+                          maxlength="1500000"
+                        ></textarea
+                        ><label for="subtitle-zh">中文译文</label
+                        ><input
+                          type="file"
+                          id="subtitle-zh-file"
+                          accept=".srt,.vtt,.txt"
+                          aria-label="选择中文字幕文件"
+                        /><textarea
+                          id="subtitle-zh"
+                          placeholder="粘贴对应中文译文，或选择文件…"
+                          maxlength="1500000"
+                        ></textarea
+                        ><button
+                          type="submit"
+                          class="primary"
+                          id="subtitle-import-save"
+                        >
+                          保存字幕
+                        </button>
+                        <p
+                          id="subtitle-import-status"
+                          role="status"
+                          class="muted"
+                        ></p>
+                      </form>
+                    </details>
+                  </section>
+                  <label for="video-notes">我的学习笔记</label
+                  ><textarea
+                    id="video-notes"
+                    maxlength="20000"
+                    placeholder="1. 我听到的表达…&#10;2. 它的意思…&#10;3. 用我的工作场景造句…"
+                  ></textarea>
+                  <div class="practice-controls">
+                    <button class="primary" id="video-notes-save">
+                      保存笔记</button
+                    ><span class="muted" id="video-note-status"></span>
+                  </div>
+                  <p class="muted" id="video-meta"></p>
+                </article>
+              </div>
+            </div>
+          </section>
+          <section class="view" id="view-plan" hidden>
+            <div class="intro">
+              <div>
+                <div class="eyebrow">A PLAN YOU CAN KEEP</div>
+                <h1>让学习形成闭环。</h1>
+                <p>求职英语为主线，雅思主题扩展表达，商务英语服务日常协作。</p>
+              </div>
+            </div>
+            <div class="plan-content">
+              <div class="flow">
+                <span>真实语境</span> → <span>主动回忆</span> →
+                <span>间隔复习</span> → <span>场景表达</span>
+              </div>
+              <h2>每天 20 分钟，每周一次复盘</h2>
+              <p>
+                先用 5 分钟复习到期词汇，再用 8 分钟学习词义、搭配并跟读；最后用
+                7 分钟完成拼写或一个场景表达。默认目标为每天自评 12
+                个不同词条，包含复习词，不要求每天学习 12 个新词。每周把卡住的 3
+                个表达带到真人课上练习。
+              </p>
+              <h2>三条学习线</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>方向</th>
+                      <th>用途</th>
+                      <th>练习产出</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>求职英语</td>
+                      <td>Java、支付与资金安全</td>
+                      <td>解释一个技术决策</td>
+                    </tr>
+                    <tr>
+                      <td>雅思主题</td>
+                      <td>工作、社会与科技</td>
+                      <td>观点 + 理由 + 例子</td>
+                    </tr>
+                    <tr>
+                      <td>商务英语</td>
+                      <td>会议、协作与交付</td>
+                      <td>一段更新或澄清请求</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2>复习规则</h2>
+              <p>
+                “还没记住”：10 分钟后再复习，并回到初始阶段。“有点印象”：1
+                天后复习，阶段保持不变。“记住了”：按 1、3、7、14、30
+                天逐级延长；达到 30 天后保持 30
+                天间隔。这是便于理解的轻量规则，不是 SM-2 或
+                FSRS。只有主动点击自评才改变进度，浏览词卡和查看答案不会计入完成。
+              </p>
+              <h2>来源与内容说明</h2>
+              <p>
+                扩充词库涵盖软件与求职、商务和雅思主题。简历仅在本机提取词条；软件资料包括
+                Python、PostgreSQL 术语表与 Google
+                工程实践。每张词卡标明来源，英文释义与情景例句分别标注。
+              </p>
+              <p>
+                基础双语释义参考
+                <a
+                  href="https://github.com/skywind3000/ECDICT"
+                  target="_blank"
+                  rel="noopener"
+                  >ECDICT 开源词典</a
+                >；常见技术词按工作语境修订。雅思主题词是选编学习材料，并非官方必考词表。可在词条编辑中补充自己的例句。
+              </p>
+              <ul>
+                <li>
+                  <a id="plan-job" target="_blank" rel="noopener"
+                    >LinkedIn · Binance Java 岗位</a
+                  >：16
+                  个词条来自岗位正文；保留词形，中文释义、搭配及例句为原创教学内容。
+                </li>
+                <li>
+                  <a
+                    href="https://takeielts.britishcouncil.org/prepare/ielts-academic/speaking/tips-lexical-resource?language=en"
+                    target="_blank"
+                    rel="noopener"
+                    >British Council · IELTS 词汇运用指南</a
+                  >：用于选择搭配与语境练习方法。雅思主题词是自主选编，不是官方题库、固定考纲或分数保证。
+                </li>
+                <li>
+                  <a
+                    href="https://learnenglish.britishcouncil.org/free-resources/business"
+                    target="_blank"
+                    rel="noopener"
+                    >British Council · 商务英语资源</a
+                  >：参考会议、邮件、面试等学习场景；商务词条与示范句为自主选编。
+                </li>
+              </ul>
+              <p>
+                来源核对日期：2026-11-15。求职页面可能更新或下架；本页面使用精选词汇快照，不自动抓取网站内容。
+              </p>
+              <h2>学习数据保存在哪里？</h2>
+              <p>
+                词库、复习进度、拼写记录、表达草稿、视频资料和视频笔记均保存在本机数据库。前端通过学习服务读取和更新数据。请从固定服务地址打开页面；服务停止时会显示连接失败，不会伪装成保存成功。
+              </p>
+              <h2>视频怎么学？</h2>
+              <p>
+                先听一遍理解大意，再打开英文字幕记录三个表达，最后用自己的项目或工作经历复述。视频的可播放性与字幕由
+                YouTube 和发布者决定；无法嵌入时可使用「在 YouTube
+                打开」。收藏、笔记和完成标记保存到数据库。视频下方可读取英文字幕与中文译文，点击英文单词查词或朗读；字幕获取失败时可以导入
+                SRT、VTT 或逐行文本。
+              </p>
+              <h2>持续更新</h2>
+              <p>
+                在「我的词库」新增或编辑词条；在「视频学习」导入视频链接或同步精选资料。频道更新会筛选标题中与求职、商务和雅思相关的词；关键词搜索需要后端配置
+                YouTube API 密钥。采集失败会保留原有资料并显示原因。
+              </p>
+              <p>
+                当前为本机单人学习服务。数据库备份、启动方式和后续部署方案见项目目录中的
+                README.md 与技术方案.md。
+              </p>
+            </div>
+          </section>
+        </div>
+        <footer class="footer">
+          <span>WORDCRAFT / 每天一点，持续积累。</span>
+          <div class="footer-tools">
+            <button id="export">导出进度</button
+            ><button id="import">导入进度</button
+            ><input
+              id="import-file"
+              type="file"
+              accept="application/json,.json"
+              hidden
+            /><span>数据库版 · v2.2</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <aside id="word-lookup" class="word-lookup" aria-label="字幕查词" hidden>
+      <button
+        id="lookup-close"
+        type="button"
+        class="text-button lookup-close"
+        aria-label="关闭查词"
+      >
+        关闭 ×</button
+      ><span class="eyebrow">WORD LOOKUP</span>
+      <h2 id="lookup-term" lang="en"></h2>
+      <p id="lookup-phonetic" lang="en"></p>
+      <p id="lookup-meaning" class="lookup-meaning" role="status"></p>
+      <details id="lookup-definition-panel">
+        <summary>英文释义</summary>
+        <p id="lookup-definition" class="lookup-definition" lang="en"></p>
+      </details>
+      <p id="lookup-source" class="muted"></p>
+      <div class="practice-controls">
+        <button id="lookup-word-speak" class="secondary" type="button">
+          朗读单词</button
+        ><button id="lookup-sentence-speak" class="secondary" type="button">
+          朗读所在句
+        </button>
+      </div>
+      <div class="lookup-context">
+        <span class="muted">所在字幕的中文译文</span>
+        <p id="lookup-context"></p>
+      </div>
+    </aside>
+    <dialog id="word-editor">
+      <div class="dialog-header">
+        <h2 id="word-editor-title">新增词条</h2>
+        <button
+          class="secondary"
+          id="word-editor-close"
+          aria-label="关闭词条编辑"
+        >
+          关闭
+        </button>
+      </div>
+      <form id="word-form">
+        <label
+          >英语内容类型<select name="example_kind" class="field">
+            <option value="example">情景例句</option>
+            <option value="definition">英文释义</option>
+          </select></label
+        >
+        <label
+          >来源说明<input
+            name="source_label"
+            maxlength="300"
+            placeholder="例如：个人简历 · 原创例句"
+        /></label>
+        <div class="editor-grid">
+          <label
+            >分类<select class="field" name="deck">
+              <option value="job">求职英语</option>
+              <option value="ielts">雅思主题</option>
+              <option value="business">商务英语</option>
+            </select></label
+          ><label
+            >英文单词或短语<input name="term" maxlength="150" required /></label
+          ><label
+            >词性<input
+              name="pos"
+              placeholder="n. / v."
+              maxlength="40"
+              required /></label
+          ><label
+            >中文解释<input name="meaning" maxlength="400" required /></label
+          ><label
+            >搭配（可选）<input name="collocation" maxlength="400" /></label
+          ><label
+            >来源链接<input
+              name="source_url"
+              type="url"
+              placeholder="https://…"
+              required
+          /></label>
+        </div>
+        <label
+          >英文例句或释义<textarea
+            name="example"
+            maxlength="2000"
+            required
+          ></textarea></label
+        ><label
+          >中文译文或释义<textarea
+            name="translation"
+            maxlength="2000"
+            required
+          ></textarea>
+        </label>
+        <p id="word-editor-error" class="feedback" role="alert"></p>
+        <div class="practice-controls">
+          <button id="word-submit" class="primary" type="submit">
+            保存词条</button
+          ><button id="word-archive" class="secondary" type="button">
+            归档词条
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

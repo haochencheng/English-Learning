@@ -218,3 +218,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Wordcraft local data and frontend artifacts
+.venv/
+.env
+.runtime/
+data/*
+!data/.gitkeep
+backups/
+__pycache__/
+.pytest_cache/
+*.pyc
+frontend/node_modules/
+frontend/dist/
+
+.DS_Store
+.env.*
+!.env.example

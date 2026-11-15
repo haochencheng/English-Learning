@@ -1,0 +1,16 @@
+{
+  "curated": [
+    {"id":"KN2jyw6D1ak","deck":"job","hint":"记录自我介绍与举例说明的表达，再用自己的项目经历复述。"},
+    {"id":"sj-dX3fZmq0","deck":"job","hint":"留意回答面试追问的组织方式；暂停后先说出自己的回答。"},
+    {"id":"nhTcuUvLGOE","deck":"job","hint":"练习用背景、行动、结果组织一次真实项目经历。"},
+    {"id":"jD3JvzaqrAg","deck":"business","hint":"记录三个礼貌请求，改写成需求澄清或协作场景。"},
+    {"id":"hdKYl8Tg_FQ","deck":"business","hint":"比较正式和非正式表达，改写一段工作沟通。"},
+    {"id":"bqznnq9gOsU","deck":"ielts","hint":"练习观点、理由和例子的展开；标题中的分数描述不构成学习效果保证。"},
+    {"id":"5_A5vjLgDec","deck":"ielts","hint":"选一个口语技巧做一次录音练习；不要把示范答案背成个人经历。"}
+  ],
+  "channels": [
+    {"id":"UCHaHD477h-FeBbVh9Sh7syA","name":"BBC Learning English","deck":"business"},
+    {"id":"UCXg7gy4XmPZEGr4kumPNGyQ","name":"IELTS Advantage","deck":"ielts"},
+    {"id":"UCNbeSPp8RYKmHUliYBUDizg","name":"Oxford Online English","deck":"job"}
+  ]
+}
